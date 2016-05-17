@@ -1,0 +1,181 @@
+extends ./_layoutMain
+block mainPageContent
+
+  mixin entry(name, location, date, title, blurb, url)
+    //- Heading
+    h4.mb0(style="margin-bottom:3px") #{name}
+    //- Meta
+    div.t-300
+      span.t-300 #{location} 
+        if url 
+          a.italic(href='#{url}') (website)
+      div #{title} 
+        span.italic (#{date}) 
+  
+    if blurb
+      .t-300.h4.mt1.caps.space-1 Summary
+      p #{blurb}
+    if block
+      p
+        .t-300.h4.mt1.caps.space-1 Highlights
+        block
+    hr.mt4.mb4
+
+
+  header.mb1
+    .left 
+      h1.mb0 Isaac Gregson
+      h4.mb1.caps.space-1 Soil-loving Agrarian
+      h5.mb0 704-516-5751
+      h5.mb0: a(href="mailto:isaacegregson@gmail.com") isaacegregson@gmail.com
+    .right 
+      img.round(style="width: 150px" src="assets/isaac-thumb.jpg")
+    .clearfix
+
+
+  section.mb4
+    h2.mb3 Strengths
+    ul 
+      li Clear and proactive communication
+      li Hard working and critically thinking
+      li Envisioning and implementing processes and site-design elements
+      li Envisioning and implementing vertically-integrated farm-income opportunities
+      li Dedication to best practices &ndash; growing food in the best possible ways
+      li Systems thinking (where food production is the natural result)
+      li Methodologies that minimize and perhaps eliminate the need for off-site inputs
+
+  section.mb4
+    h2.mb3 Know-how
+    ul 
+      li Small-scale diversified organic vegetable cultivation (and the array of skills that such entails, such as planning, germinating, planting, harvesting, etc)
+      li Methodologies that build soil
+      li Initial-site preparation
+      li Soil amending via organic inputs
+      li Drip irrigation installation and management
+      li Living-mulch systems
+      li Growing techniques that minimize and potentially eliminate the need to irrigate
+      li Cover cropping
+      li Duck and Chicken management (and harnessing their services)
+      li Basic goat management
+      li Basic tractor operation (and an ability to quickly learn other large-machinery operation)
+      li Orchard/berry-establishment and management techniques (that harness the services of poultry, barrier plants, and a blend of carbon and nitrogen-based ground covers)
+
+  section.mb4
+    h2.mb3 Experience
+  
+    +entry(
+      "Russian Village Farmsteading",
+      "Russia",
+      "2013-2016",
+      "Happy Volunteer",
+      "After meeting my to-be wife and coming to Russia to marry, I've spent the last three years living and working in a city but spending as much time as possible in the countryside helping on the family homestead."
+    )
+      ul 
+        li Implementing the permaculture technique of "comfrey rings" and deep mulching around several young fruit trees (that were otherwise in danger of dying due to undergrowth competition)
+        li Implementing several permaculture-based design changes to the property that have helped increase the quality and quantity of productive growing space
+
+    +entry(
+      "Teach and Learn with Georgia",
+      "Republic of Georgia",
+      "2012",
+      "Happy Volunteer",
+      "One year of living and working as an English teacher in rural villages of the Republic of Georgia, where I spent after-school time working with villagers in their gardens and fields. A valuable experience that taught me much about the importance of appropriate technologies and ecologically-sound growing methodologies."
+    )
+
+    +entry(
+      "Natural Farm of Edessa", 
+      "Edessa, Greece",
+      "Summer 2012",
+      "Natural Farming Conference/Workshop",
+      "Participated in a natural farming conference and workshop lead by Panagiotis Manikis, who lived and learned from Masanobu Fukuoka, a late Japanese farmer whose life and work are of incredible significance to natural farming.",
+      "http://www.natural-farming.eu/en/edessa/natural-farm"
+    )
+
+    +entry(
+      "Cloudview EcoFarms",
+      "Columbia Basin, WA",
+      "2011",
+      "Happy Volunteer",
+      "Volunteered in all aspects of vegetable growing and assisted in selling at weekly markets.",
+      "http://www.cloudviewecofarms.org/"
+    )
+      ul 
+        li Learning particular growing challenges of arid climates
+        li Learning ways to minimize (and perhaps eliminate) needs to irrigate
+        li Learning the ins and outs of multiple irrigation methods
+
+    +entry(
+      "Pacific Crest Farm",
+      "Vashon Island, WA",
+      "June 2010 - November 2010",
+      "Assistant Farm Manager",
+      "An incredibly memorable and valuable season of hard yet rewarding work that yielded valuable knowledge on the ins and outs of running a successful organic-vegetable farm. The farm is on 18 acres and consists or orchards, berries patches, and around 2 acres in vegetable cultivation.",
+      "http://www.pacificcrest.org/the-farm/"
+    )
+      ul 
+        li Working and co-managing in all aspects of small-scale cultivation.
+        li Organizing and selling at weekly markets.
+        li Establishing new farm/business sales relationships.
+        li Coordinating, training, and supervising volunteers.
+        li Planning and implementing new farm processes and design elements
+        li Preparing and managing the ins and outs of the farm's weekly CSA (<a href="http://www.localharvest.org/csa/">community supported agriculture</a>).
+
+    +entry(
+      "MESD Outdoor School",
+      "Portland, OR",
+      "Spring 2010",
+      "Field Program Instructor"
+    )
+      ul  
+        li Taught soil science classes
+        li Lead educational activities
+        li Lead nature excursions
+        li Mentored and guided high schoolers in their work with 6th-grade campers.
+
+    +entry(
+      "Kodiak Alaska Community Volunteer",
+      "Kodiak & Spruce Island, Alaska",
+      "Summer 2009",
+      "Happy Volunteer",
+      "A summer of living and volunteering with the Orthodox Christian community of Kodiak and Spruce Island, Alaska. Included valuable northern gardening and appropriate technology experience."
+    )
+      ul
+        li Helped maintain the monastery vegetable garden.
+        li Taught several environmental education classes to students
+        li Oversaw and implemented a root-cellar design and construction
+        li Created an educational portfolio of the root-cellar creation process
+
+
+    +entry(
+      "Warren Wilson College Garden",
+      "Asheville/Swannanoah NC",
+      "2008 - 2009",
+      "Crew Member",
+      "Worked in all aspects of small-scale vegetable growing and selling, maintained established orchards, and maintained established berry groves.",
+      "http://inside.warren-wilson.edu/~garden/garden.php"
+    )
+      ul
+        li Learning and often implementing the John Jeavons' bio-intensive bed-preparation method "double digging"
+        li Managing a section of the garden, learning under the guidance of the lead manager
+        li Selling at weekly markets
+        li Giving garden tours
+
+    +entry(
+      "Hijos Del Maiz (Village and Spanish language school)",
+      "Nicaragua (Esteli Region)",
+      "Spring 2007",
+      "Student, Happy Volunteer",
+      "Several months of living, studying Spanish, riding horses, and being first exposed to permaculture with Nicaraguans in a rural, arid, and agrarian-based village.",
+      "http://www.hijosdelmaiz.net/eng/vision.html"
+    )
+
+  section.mb4
+    h2.mb3 Education
+
+    h4.mb0 Warren Wilson College 
+      span.itailc (2005 - 2009)
+    div.t-300.mb05
+      span Asheville/Swannanoa, NC 
+        a.italic(href="https://www.warren-wilson.edu/") (website)
+    p.mb0 Bachelor of Arts in Environmental Studies
+    p focused on Sustainable Agriculture & Environmental Education
